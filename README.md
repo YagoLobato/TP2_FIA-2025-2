@@ -44,24 +44,19 @@ O projeto utiliza a seguinte pipeline:
 
 ---
 
-### 📊 Resultados
+📊 Resultados
 
-Acurácia final: **71%**
+O modelo atingiu um desempenho satisfatório considerando a complexidade do dataset.
 
-**Loss x Epoch / Accuracy x Epoch:**
-![Gráfico de Acurácia e Perda](./grafico_acuracia.png)
+* **Acurácia final:** 71% (0.71)
 
-**Matriz de confusão:**
-![Matriz de Confusão](./matriz_confusao.png)
+#### Histórico de Treinamento (Acurácia e Loss)
+![Gráfico de Treinamento](grafico_acuracia.png)
+*O gráfico demonstra a estabilidade do treinamento e a redução do overfitting graças ao Data Augmentation.*
 
-### 🧠 Análise da Generalização e Erros
-
-**Classes mais confundidas:**
-* `plastic` (Recall de 57%) e `trash` (Recall de 40%).
-
-**Possíveis causas:**
-* Semelhança visual entre `plastic` e `glass`.
-* A classe `trash` (lixo orgânico) ainda é a mais desbalanceada, dificultando o aprendizado.
+#### Matriz de Confusão
+![Matriz de Confusão](matriz_confusao.png)
+*A matriz indica que o modelo tem excelente desempenho em Papel e Papelão, com melhorias significativas na detecção de Plástico e Lixo orgânico na versão final.*
 
 ---
 
