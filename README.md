@@ -56,6 +56,7 @@ O modelo atingiu um desempenho satisfatório considerando a complexidade do data
 
 #### Matriz de Confusão
 ![Matriz de Confusão](matriz_confusao.png)
+
 *A matriz indica que o modelo tem excelente desempenho em Papel e Papelão, com melhorias significativas na detecção de Plástico e Lixo orgânico na versão final.*
 
 ---
@@ -64,13 +65,14 @@ O modelo atingiu um desempenho satisfatório considerando a complexidade do data
 
 - Classes mais confundidas:
 
-  > _(Anotar após análise da matriz de confusão)_
-  >
+  > Lixo Orgânico (trash): Esta foi a classe com o desempenho mais baixo (recall de $\approx 40\%$). O modelo teve dificuldade em identificar corretamente os itens desta categoria.
+  > Plástico (plastic): Foi a segunda classe mais difícil, com um recall de $\approx 57\%$.
+  
 - Possíveis causas:
 
-  - Semelhança visual entre classes
-  - Dataset desbalanceado
-  - Limitações da arquitetura
+  - Semelhança visual entre classes: A principal confusão provavelmente ocorre entre plastic e glass (vidro), já que ambos podem ser transparentes e ter formatos de garrafa, tornando-os difíceis de distinguir para a CNN.
+  - Dataset desbalanceado: A classe trash é a menor de todo o dataset. Mesmo com o uso de class_weight (que ajudou muito), o modelo ainda teve menos exemplos para aprender os padrões dessa classe, o que explica seu baixo recall.
+  - Limitações da arquitetura: Embora o modelo tenha atingido 71%, ele ainda é uma CNN personalizada. Classes muito complexas ou com poucas amostras podem exigir arquiteturas mais profundas (como as de Transfer Learning) para uma classificação perfeita.
 
 ---
 
