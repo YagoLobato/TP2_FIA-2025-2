@@ -44,16 +44,24 @@ O projeto utiliza a seguinte pipeline:
 
 ---
 
-## 📊 Resultados (a preencher após execução)
+### 📊 Resultados
 
-- **Acurácia final:**
+Acurácia final: **71%**
 
-  > _Exemplo:_ `xx.xx%`
-  >
-- **Matriz de confusão:**
-  _(Inserir imagem ou tabela após execução do notebook)_
-- **Loss x Epoch / Accuracy x Epoch:**
-  _(Inserir gráficos gerados no notebook)_
+**Loss x Epoch / Accuracy x Epoch:**
+![Gráfico de Acurácia e Perda](./grafico_acuracia.png)
+
+**Matriz de confusão:**
+![Matriz de Confusão](./matriz_confusao.png)
+
+### 🧠 Análise da Generalização e Erros
+
+**Classes mais confundidas:**
+* `plastic` (Recall de 57%) e `trash` (Recall de 40%).
+
+**Possíveis causas:**
+* Semelhança visual entre `plastic` e `glass`.
+* A classe `trash` (lixo orgânico) ainda é a mais desbalanceada, dificultando o aprendizado.
 
 ---
 
